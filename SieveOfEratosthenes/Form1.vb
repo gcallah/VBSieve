@@ -17,7 +17,7 @@ Public Class Sieve
         Dim primes() As Integer
         primes = MathFuncs.sift(upTo)
         Dim i As Integer = 0
-        Do While i < primes.Length
+        Do While i < (primes.Length - 1)
             PrimesListBox.Items.Add(CStr(primes(i)))
             i = i + 1
         Loop
