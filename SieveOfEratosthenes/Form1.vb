@@ -12,7 +12,8 @@ Public Class Sieve
     End Sub
 
     Private Sub FindPrimesButton_Click(sender As Object, e As EventArgs) Handles FindPrimesButton.Click
-        Dim upTo = CInt(UpToTextBox.Text) / 2
+        PrimesListBox.Items.Clear()
+        Dim upTo = (CInt(UpToTextBox.Text) - 1) / 2
         Dim primes() As Integer
         primes = MathFuncs.sift(upTo)
         Dim i As Integer = 0
