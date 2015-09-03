@@ -25,11 +25,12 @@ Partial Class Sieve
         Me.UpToTextBox = New System.Windows.Forms.TextBox()
         Me.FindPrimesButton = New System.Windows.Forms.Button()
         Me.MsgBox = New System.Windows.Forms.TextBox()
-        Me.ListBox1 = New System.Windows.Forms.ListBox()
+        Me.PrimesListBox = New System.Windows.Forms.ListBox()
         Me.SuspendLayout()
         '
         'UpToTextBox
         '
+        Me.UpToTextBox.ForeColor = System.Drawing.SystemColors.WindowText
         Me.UpToTextBox.Location = New System.Drawing.Point(57, 38)
         Me.UpToTextBox.Name = "UpToTextBox"
         Me.UpToTextBox.Size = New System.Drawing.Size(100, 20)
@@ -37,35 +38,38 @@ Partial Class Sieve
         '
         'FindPrimesButton
         '
-        Me.FindPrimesButton.Location = New System.Drawing.Point(82, 97)
+        Me.FindPrimesButton.BackColor = System.Drawing.Color.PaleGreen
+        Me.FindPrimesButton.Location = New System.Drawing.Point(82, 88)
         Me.FindPrimesButton.Name = "FindPrimesButton"
         Me.FindPrimesButton.Size = New System.Drawing.Size(75, 23)
         Me.FindPrimesButton.TabIndex = 1
         Me.FindPrimesButton.Text = "Find Primes"
-        Me.FindPrimesButton.UseVisualStyleBackColor = True
+        Me.FindPrimesButton.UseVisualStyleBackColor = False
         '
         'MsgBox
         '
+        Me.MsgBox.ForeColor = System.Drawing.Color.Maroon
         Me.MsgBox.Location = New System.Drawing.Point(57, 268)
         Me.MsgBox.Name = "MsgBox"
         Me.MsgBox.ReadOnly = True
-        Me.MsgBox.Size = New System.Drawing.Size(100, 20)
+        Me.MsgBox.Size = New System.Drawing.Size(333, 20)
         Me.MsgBox.TabIndex = 3
         '
-        'ListBox1
+        'PrimesListBox
         '
-        Me.ListBox1.FormattingEnabled = True
-        Me.ListBox1.Location = New System.Drawing.Point(57, 143)
-        Me.ListBox1.Name = "ListBox1"
-        Me.ListBox1.Size = New System.Drawing.Size(120, 95)
-        Me.ListBox1.TabIndex = 4
+        Me.PrimesListBox.FormattingEnabled = True
+        Me.PrimesListBox.Location = New System.Drawing.Point(57, 143)
+        Me.PrimesListBox.Name = "PrimesListBox"
+        Me.PrimesListBox.Size = New System.Drawing.Size(128, 82)
+        Me.PrimesListBox.TabIndex = 4
         '
         'Sieve
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.SystemColors.GradientActiveCaption
         Me.ClientSize = New System.Drawing.Size(402, 346)
-        Me.Controls.Add(Me.ListBox1)
+        Me.Controls.Add(Me.PrimesListBox)
         Me.Controls.Add(Me.MsgBox)
         Me.Controls.Add(Me.FindPrimesButton)
         Me.Controls.Add(Me.UpToTextBox)
@@ -79,5 +83,5 @@ Partial Class Sieve
     Friend WithEvents UpToTextBox As TextBox
     Friend WithEvents FindPrimesButton As Button
     Friend WithEvents MsgBox As TextBox
-    Friend WithEvents ListBox1 As ListBox
+    Friend WithEvents PrimesListBox As ListBox
 End Class
